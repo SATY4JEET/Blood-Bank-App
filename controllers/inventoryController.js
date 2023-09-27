@@ -10,12 +10,16 @@ const createInventoryController = async (req, res) => {
       throw new Error("User not Found");
     }
 
+    //adsfadfa
+
     if (req.body.inventoryType === "in" && user.role !== "donor") {
       throw new Error("Not a donor account");
     }
     if (req.body.inventoryType === "out" && user.role !== "hospital") {
       throw new Error("Not a Hospital");
     }
+
+    //adsfadfa
 
     if (req.body.inventoryType == "out") {
       const requestedBloodGroup = req.body.bloodGroup;
